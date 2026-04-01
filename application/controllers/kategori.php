@@ -19,8 +19,8 @@ class kategori extends CI_Controller{
     public function tambah()
     {
         $this->load->view('templates/header');
-        $this->load->view('templates/topbar');
         $this->load->view('templates/sidebar');
+        $this->load->view('templates/topbar');
         $this->load->view('kategori/tambah');
         $this->load->view('templates/footer');
     }
