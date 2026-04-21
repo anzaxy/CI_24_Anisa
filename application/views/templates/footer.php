@@ -1,30 +1,26 @@
 </div>
 </div>
-</div>
 
-<script src="<?= base_url('assets/vendor/jquery/jquery.min.js');?>"></script>
-<script src="<?= base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js');?>"></script>
-<script src="<?= base_url('assets/vendor/datatables/jquery.dataTables.min.js');?>"></script>
-<script src="<?= base_url('assets/vendor/datatables/dataTables.bootstrap4.min.js');?>"></script>
-<script src="<?= base_url('assets/vendot/chart.js/Chart.min.js'); ?>"></script>
-<script src="<?= base_url('assets/js/sb-admin-2.min.js');?>"></script>
+<script src="<?= base_url('assets/vendor/jquery/jquery.min.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/datatables/jquery.dataTables.min.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/datatables/dataTables.bootstrap4.min.js'); ?>"></script>
+<script src="<?= base_url('assets/vendor/chart.js/Chart.min.js'); ?>"></script>
+<script src="<?= base_url('assets/js/sb-admin-2.min.js'); ?>"></script>
 
 <script>
-
-
-
-    $(document).ready(function(){
+    $(document).ready(function() {                                        
         $('#dataTable').DataTable({
             "language": {
-                "search": "Cari:",
-                "lengtMenu": "Tampilan_MENU_data",
+                "search": "Cari :",
+                "lenghtMenu": "Tampilkan _MENU_ data",
                 "info": "Menampilkan _START_ sampai _END_ dari _TOTAL_ data",
                 "paginate":{
                     "previous": "Sebelumnya",
                     "next": "Berikutnya"
                 }
             }
-        });
+        })
     });
 </script>
 <script>
@@ -36,21 +32,21 @@
             datasets: [{
                 labels:'Jumlah Data',
                 data:[
-                    <?= $total_buku; ?>
-                    <?= $total_anggota; ?>,
-                    // <?= $total_peminjaman; ?>
+                    <?= $total_buku; ?>,
+                    <?= $total_anggota; ?>
+                   
                 ],
                 backgroundColor:[
                     '#4e73df',
-                    '#1cc88a',
-                    '#f6c23e'
+                    '#1cc88a'
+                    
                 ]
             }]
         },
-        option: {
+        options: {
             responsive: true,
-            scales: {
-                yAxes: [{
+            scales:{
+                yAxes:[{
                     ticks:{
                         beginAtZero: true
                     }
@@ -58,6 +54,6 @@
             }
         }
     });
-    </script>
+</script>
 </body>
 </html>
